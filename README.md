@@ -3,13 +3,17 @@
 __Android Application Development Project__
 
 ##Students
+
 GONDRAS Pierre-Louis / PARIS Franck
 
 ##Selected workflow
+
 Github Flow
 
 ##Subject
-*insert subject here*
+
+Quizz game application
 
 ##Libs
+
 *insert useful libs here*
