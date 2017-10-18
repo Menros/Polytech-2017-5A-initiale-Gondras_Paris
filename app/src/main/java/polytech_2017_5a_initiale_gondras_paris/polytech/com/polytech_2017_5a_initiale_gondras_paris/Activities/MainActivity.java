@@ -9,7 +9,7 @@ import polytech_2017_5a_initiale_gondras_paris.polytech.com.polytech_2017_5a_ini
 import polytech_2017_5a_initiale_gondras_paris.polytech.com.polytech_2017_5a_initiale_gondras_paris.Fragments.QuizzFragment;
 import polytech_2017_5a_initiale_gondras_paris.polytech.com.polytech_2017_5a_initiale_gondras_paris.R;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements HomeFragment.HomeInterface{
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,7 +29,8 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void openQuizz(View view){
+    @Override
+    public void on1vIAClick() {
 
         QuizzFragment newFragment = new QuizzFragment();
         newFragment.setArguments(getIntent().getExtras());

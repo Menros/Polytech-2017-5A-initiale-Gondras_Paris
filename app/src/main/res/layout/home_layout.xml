@@ -36,12 +36,12 @@
             >
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/button1vIA"
                 android:layout_width="0dp"
                 android:layout_height="@dimen/buttonSmallHeight"
                 android:layout_weight="0.5"
                 android:text="1 vs IA"
-                android:onClick="openQuizz"/>
+                />
 
             <Button
                 android:id="@+id/button2"

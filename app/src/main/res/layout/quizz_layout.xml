@@ -66,50 +66,6 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearQuestion"
-        android:layout_height="wrap_content"
-        android:layout_width="0dp"
-        android:orientation="horizontal"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearPlayerScore"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/linearValue">
-
-        <TextView
-            android:id="@+id/question"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:text="De quel animal présent en Mère Russie est-ce le cri ?"
-            android:textSize="20sp"
-            android:layout_weight="1"
-            android:textAlignment="center"
-            />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearValue"
-        android:layout_height="wrap_content"
-        android:layout_width="0dp"
-        android:orientation="horizontal"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearQuestion"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/linearAnswers">
-
-        <TextView
-            android:id="@+id/value"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:text="Valeur : 5 pts"
-            android:textSize="16sp"
-            android:layout_weight="1"
-            android:textAlignment="center"
-            />
-
-    </LinearLayout>
-
-    <LinearLayout
         android:id="@+id/linearAnswers"
         android:layout_height="wrap_content"
         android:layout_width="0dp"
@@ -134,7 +90,7 @@
                 android:layout_height="@dimen/buttonSmallHeight"
                 android:layout_weight="0.5"
                 android:text="Davai davai"
-                android:onClick="openQuizz"/>
+                />
 
             <Button
                 android:id="@+id/answer2"
@@ -160,8 +116,7 @@
                 android:layout_width="0dp"
                 android:layout_height="@dimen/buttonSmallHeight"
                 android:layout_weight="0.5"
-                android:text="Go fast"
-                android:onClick="openQuizz"/>
+                android:text="Go fast"/>
 
             <Button
                 android:id="@+id/answer4"
@@ -170,6 +125,54 @@
                 android:layout_weight="0.5"
                 android:text="Rush B"
                 />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearContent"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearPlayerScore"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/linearAnswers">
+
+        <LinearLayout
+            android:id="@+id/linearQuestion"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_weight="0.5"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/question"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="De quel animal présent en Mère Russie est-ce le cri ?"
+                android:textSize="20sp"
+                android:textAlignment="center"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearValue"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_weight="0.5"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/value"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Valeur : 5 pts"
+                android:textSize="16sp"
+                android:textAlignment="center"
+                />
+
         </LinearLayout>
 
     </LinearLayout>
