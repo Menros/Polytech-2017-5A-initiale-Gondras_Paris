@@ -7,13 +7,171 @@
     tools:context="polytech_2017_5a_initiale_gondras_paris.polytech.com.polytech_2017_5a_initiale_gondras_paris.Activities.MainActivity"
     android:padding="20dp">
 
-    <TextView
-        android:id="@+id/textViewOffline"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/linearTeamLives"
         android:layout_height="wrap_content"
-        android:text="DAVAI DAVAI GOOOOO FAST RUSH B"
+        android:layout_width="0dp"
+        android:orientation="horizontal"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintRight_toRightOf="parent">
+
+        <TextView
+            android:id="@+id/teamName"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_weight="0.5"
+            android:text="Equipe : B"
+            android:textAlignment="textStart"
+            />
+
+        <TextView
+            android:id="@+id/livesCounter"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_weight="0.5"
+            android:text="Vies : 3"
+            android:textAlignment="textEnd"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearPlayerScore"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearTeamLives"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <TextView
+            android:id="@+id/playerName"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_weight="0.5"
+            android:text="Joueur : Blyat"
+            android:textAlignment="textStart"
+            />
+
+        <TextView
+            android:id="@+id/score"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_weight="0.5"
+            android:text="Score : 18"
+            android:textAlignment="textEnd"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearQuestion"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearPlayerScore"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/linearValue">
+
+        <TextView
+            android:id="@+id/question"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="De quel animal présent en Mère Russie est-ce le cri ?"
+            android:textSize="20sp"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearValue"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearQuestion"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/linearAnswers">
+
+        <TextView
+            android:id="@+id/value"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Valeur : 5 pts"
+            android:textSize="16sp"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearAnswers"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        >
+
+        <LinearLayout
+            android:id="@+id/linearAnswers1"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            >
+
+            <Button
+                android:id="@+id/answer1"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/buttonSmallHeight"
+                android:layout_weight="0.5"
+                android:text="Davai davai"
+                android:onClick="openQuizz"/>
+
+            <Button
+                android:id="@+id/answer2"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/buttonSmallHeight"
+                android:layout_weight="0.5"
+                android:text="Vodka"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearAnswers2"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearAnswers1"
+            app:layout_constraintRight_toRightOf="parent"
+            >
+
+            <Button
+                android:id="@+id/answer3"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/buttonSmallHeight"
+                android:layout_weight="0.5"
+                android:text="Go fast"
+                android:onClick="openQuizz"/>
+
+            <Button
+                android:id="@+id/answer4"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/buttonSmallHeight"
+                android:layout_weight="0.5"
+                android:text="Rush B"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
